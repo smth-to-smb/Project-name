@@ -4,6 +4,7 @@ pipeline {
      QODANA_REMOTE_URL="${GIT_URL}"
      QODANA_BRANCH="${GIT_BRANCH}"
      QODANA_REVISION="${GIT_COMMIT}"
+     QODANA_CHECKOUT_DIR="${GIT_CHECKOUT_DIR}"
      
   }
      agent {
@@ -20,7 +21,7 @@ pipeline {
         stage('Qodana') {
             steps {
                 sh "echo $QODANA_REMOTE_URL"
-                sh "echo $GIT_CHECKOUT_DIR"
+                sh "echo $QODANA_CHECKOUT_DIR"
                 sh "qodana --project-dir=/data/project"
             }
         }
