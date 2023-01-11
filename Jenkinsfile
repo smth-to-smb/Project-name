@@ -8,7 +8,7 @@ pipeline {
      agent {
         docker {
             args '''
-                -v https://github.com/smth-to-smb/rate-informer.git:/data/project
+                -v https://github.com/smth-to-smb/rate-informer:/data/project
                 --entrypoint=""
             '''
             image 'jetbrains/qodana-php:2022.3-eap'
