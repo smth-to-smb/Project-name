@@ -20,6 +20,7 @@ pipeline {
         stage('Qodana') {
             steps {
                 sh "echo $QODANA_REMOTE_URL"
+                sh "echo $GIT_CHECKOUT_DIR"
                 sh "qodana --project-dir=/data/project"
             }
         }
