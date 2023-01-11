@@ -5,7 +5,9 @@ pipeline {
   }
   stages {
     stage('ShowBranch'){
-      sh 'echo $QODANA_BRANCH'
+      steps{
+        sh 'echo $QODANA_BRANCH'
+      }
     }
   }
 }
