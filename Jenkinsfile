@@ -10,18 +10,17 @@ pipeline {
             args '''
                 -v "${WORKSPACE}":/data/project
                 --entrypoint=""
-            '''
+                 '''
             image 'jetbrains/qodana-php:2022.3-eap'
         }
     }
 
     stages {
         stage('Qodana') {
-            when {
-               branch 'feature'
-            }
             steps {
-                sh "qodana --project-dir=/data/project"
+                sh '''qodana --project-dir=/data/project 
+                   --fail-threshold 30
+                   '''
             }
         }
     }    
