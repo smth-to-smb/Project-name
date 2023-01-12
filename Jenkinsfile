@@ -17,6 +17,9 @@ pipeline {
 
     stages {
         stage('Qodana') {
+            when {
+               branch 'feature'
+            }
             steps {
                 sh "qodana --project-dir=/data/project"
             }
