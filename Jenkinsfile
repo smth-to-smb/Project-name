@@ -4,13 +4,13 @@ pipeline {
      QODANA_REMOTE_URL="${GIT_URL}"
      QODANA_BRANCH="${GIT_BRANCH}"
      QODANA_REVISION="${GIT_COMMIT}"
-     QODANA_CHECKOUT_DIR="${WORKSPACE}"
+     QODANA_CHECKOUT_DIR="${WORKSPACE}" + ":/data/project"
      
   }
      agent {
         docker {
             args '''
-                -v "$QODANA_CHECKOUT_DIR" + ":/data/project"
+                -v "$QODANA_CHECKOUT_DIR"
                 --entrypoint=""
             '''
             image 'jetbrains/qodana-php:2022.3-eap'
