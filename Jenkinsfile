@@ -10,7 +10,7 @@ pipeline {
      agent {
         docker {
             args '''
-                -v "$QODANA_CHECKOUT_DIR"
+                -v "${WORKSPACE}" + ":/data/project"
                 --entrypoint=""
             '''
             image 'jetbrains/qodana-php:2022.3-eap'
