@@ -10,7 +10,7 @@ pipeline {
      agent {
         docker {
             args '''
-                -v /home/anton/Desktop/informer/rate-informer:/data/project
+                -v ${QODANA_CHECKOUT_DIR}:/data/project
                 --entrypoint=""
             '''
             image 'jetbrains/qodana-php:2022.3-eap'
