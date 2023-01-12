@@ -1,5 +1,4 @@
 pipeline {
-  agent none {
   environment {
      QODANA_TOKEN= credentials('qodana-token')
      QODANA_REMOTE_URL="${GIT_URL}"
@@ -26,6 +25,5 @@ pipeline {
                 sh "qodana --project-dir=/data/project"
             }
         }
-    }
-}    
+    }    
 }
