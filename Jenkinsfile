@@ -11,7 +11,7 @@ pipeline {
      agent {
         docker {
             args '''
-                -v "${WORKSPACE}" + ":/data/project"
+                -v "${WORKSPACE}":/data/project
                 --entrypoint=""
             '''
             image 'jetbrains/qodana-php:2022.3-eap'
