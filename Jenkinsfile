@@ -4,7 +4,7 @@ pipeline {
      QODANA_REMOTE_URL="${GIT_URL}"
      QODANA_BRANCH="${GIT_BRANCH}"
      QODANA_REVISION="${GIT_COMMIT}"
-     QODANA_CHECKOUT_DIR="${GIT_CHECKOUT_DIR}"
+     QODANA_CHECKOUT_DIR="${WORKSPACE}"
      
   }
      agent {
