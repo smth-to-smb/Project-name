@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh '''
                    qodana \
-                   --fail-threshold 50
+                   --fail-threshold 20
                    '''
             }
         }
