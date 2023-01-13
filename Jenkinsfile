@@ -19,8 +19,7 @@ pipeline {
         stage('Qodana') {
             steps {
                 sh '''
-                   qodana 
-                   --fail-threshold 50
+                   qodana --fail-threshold 50
                    '''
             }
         }
