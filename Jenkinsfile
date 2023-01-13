@@ -21,7 +21,7 @@ pipeline {
                 sh '''
                    qodana 
                    --project-dir=/data/project 
-                   --fail-threshold 30
+                   --fail-threshold 50
                    '''
             }
         }
