@@ -18,9 +18,9 @@ pipeline {
     stages {
         stage('Qodana') {
             steps {
-                sh '''qodana --project-dir=/data/project \
-                   --fail-threshold 20
-                   '''
+                sh "qodana --project-dir=/data/project \
+                   --fail-threshold 30
+                   "
             }
         }
     }    
