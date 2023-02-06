@@ -2,3 +2,4 @@ This is the master text for the master branch
 The second line
 The third line
 Commit text
+Commit text
