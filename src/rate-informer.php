@@ -82,7 +82,7 @@ function ri_shortcode_handler()
         <div id="slider">
             <?php
 
-            $filepath = 'http://druglogista.ru/rates/randomrates' . rotator() . '.xml';
+            $filepath = 'http://example.com/rates/randomrates' . rotator() . '.xml';
             $myrates = simplexml_load_file($filepath);
 
 
@@ -90,7 +90,7 @@ function ri_shortcode_handler()
                 ?>
                 <div class="slide">
                     <div class="slide_wrapper">
-                        <div class="up_link"><a href="http://druglogista.ru/response.php?id=<?= $express->id ?>" target="blank">Interested?
+                        <div class="up_link"><a href="http://example.com/response.php?id=<?= $express->id ?>" target="blank">Interested?
                                 Click it!</a></div>
                         <div><span>Route:</span> <?= $express->origin ?>&nbsp;-&nbsp;<?= $express->destination ?></div>
                         <div><span>Transport:</span> <?= $express->container_type ?></div>
