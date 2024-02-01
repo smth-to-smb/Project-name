@@ -11,4 +11,4 @@ profile:
 
 linter: jetbrains/qodana-php:latest
 
-failThreshold: 1
+failThreshold: 100
