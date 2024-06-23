@@ -1,3 +1,5 @@
 version: "1.0"
 linter: jetbrains/qodana-php:2024.1
 
+profile:
+    path: .qodana/mp.yaml
