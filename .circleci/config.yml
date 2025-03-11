@@ -3,6 +3,7 @@ orbs:
   qodana: jetbrains/qodana@2024.3
 jobs:
   code-quality:
+    context: qodana
     machine:
       image: 'ubuntu-2004:current'
     environment:
