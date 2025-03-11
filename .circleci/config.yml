@@ -15,4 +15,5 @@ workflows:
     jobs:
       - code-quality:
           context: qodana
+
           
