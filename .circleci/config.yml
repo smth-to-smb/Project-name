@@ -6,7 +6,7 @@ jobs:
     machine:
       image: 'ubuntu-2004:current'
     environment:
-      QODANA_TOKEN: $QODANA_TOKEN
+      QODANA_TOKEN: '$QODANA_TOKEN'
     steps:
       - checkout
       - qodana/scan
