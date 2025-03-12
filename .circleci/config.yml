@@ -1,18 +1,25 @@
-version: '2.1'
+version: 2.1
+
 orbs:
   qodana: jetbrains/qodana@2024.3
+
 jobs:
   code-quality:
     machine:
       image: 'ubuntu-2004:current'
     environment:
-      QODANA_TOKEN: '$QODANA_TOKEN'
+      QODANA_TOKEN: "$QODANA_TOKEN"
     steps:
       - checkout
+      - run:
+          name: "Debug: Print QODANA_TOKEN"
+          command: "echo $QODANA_TOKEN"  # Dieser Schritt gibt den Wert der Variable aus
       - qodana/scan
+
 workflows:
   main:
     jobs:
       - code-quality:
           context: qodana
+
 
