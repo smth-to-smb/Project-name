@@ -21,6 +21,6 @@ workflows:
           filters:
             branches:
               only:
-                - main  # Ersetze 'main' durch den gewünschten Branch-Namen
+                - feature  # Ersetze 'main' durch den gewünschten Branch-Namen
 
 
