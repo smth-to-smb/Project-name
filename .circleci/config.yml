@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - qodana/scan:
-          args: | 
+          args: > 
             --fail-threshold 30 
             --baseline baseline.json
 
