@@ -18,5 +18,9 @@ workflows:
     jobs:
       - code-quality:
           context: qodana
+          filters:
+            branches:
+              only:
+                - main  # Ersetze 'main' durch den gewünschten Branch-Namen
 
 
