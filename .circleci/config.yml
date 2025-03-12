@@ -7,8 +7,7 @@ jobs:
   code-quality:
     machine:
       image: 'ubuntu-2004:current'
-    environment:
-      QODANA_TOKEN: $AAAAAA
+    environment: QODANA_TOKEN
     steps:
       - checkout
       - run:
