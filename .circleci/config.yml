@@ -10,7 +10,8 @@ jobs:
     environment: $QODANA_TOKEN
     steps:
       - checkout
-      - qodana/scan
+      - qodana/scan:
+          args: --fail-threshold 5
 
 workflows:
   main:
