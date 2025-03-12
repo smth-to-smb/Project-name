@@ -8,7 +8,7 @@ jobs:
     machine:
       image: 'ubuntu-2004:current'
     environment:
-      QODANA_TOKEN: $QODANA_TOKEN
+      QODANA_TOKEN: $AAAAAA
     steps:
       - checkout
       - run:
