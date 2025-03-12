@@ -10,9 +10,6 @@ jobs:
     environment: $QODANA_TOKEN
     steps:
       - checkout
-      - run:
-          name: "Debug: Print QODANA_TOKEN"
-          command: "echo $QODANA_TOKEN"  # Dieser Schritt gibt den Wert der Variable aus
       - qodana/scan
 
 workflows:
