@@ -1,7 +1,11 @@
-version: "1.0"
-linter: jetbrains/qodana-php:2025.2
+configurations:
+    - id: project-a
+      name: Project A configuration
+      description: The configuration used in project A
+      qodanaYaml: config-a/qodana.yaml
 
-profile:
-    name: qodana.recommended
-
-
+    - id: project-b
+      name: Project B configuration
+      description: The configuration used in project B
+      qodanaYaml: config-b/qodana.yaml
+        
