@@ -1,8 +1,11 @@
 version: "1.0"
-linter: jetbrains/qodana-php:2025.2
+
+imports:
+  - ../base/qodana.yaml # path to base profile to use
 
 profile:
-    path: mp.yaml
-    
-
+  name: qodana.starter
+  inspections:
+    - group: "category:CSS"
+      enabled: true
 
